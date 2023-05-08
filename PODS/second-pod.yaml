@@ -1,0 +1,17 @@
+---
+apiVersion: vi
+kind: Pod
+metadata: 
+  name: second-pod
+spec: 
+  containers:
+    - image: nginx:1.23
+      name: nginx
+      ports:
+        - containerPort: 80
+          protocol: TCP
+    - image: 
+      name: jenkins/jenkins:lts-jdk11
+      ports:
+        - containerPort: 8080
+          protocol: TCP
